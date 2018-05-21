@@ -1,58 +1,108 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry, View, Button, Alert, ButtonGroup, TouchableOpacity, StyleSheet, Platform } from 'react-native';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+const colorarr = ["black", "blue", "cyan", "green", "magenta", "red", "yellow"];
+const idx = 0;
+const conum = 7;
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      index: idx
+    }
+  }
+
+  // colorchange(){
+  //   this.setState({
+  //     color: 'green'
+  //   });
+  // }
+  colorchange = () =>
+  {
+    this.setState({ index: ++idx % conum});
+  }
+
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
-        </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+      // <View style={{flex :1, justifyContent: 'center', margin: 15 }}>
+      //
+      // <View style={{marginTop: 15}}>
+      //
+      //   <Button onPress={ this.colorchange } title='a' backgroundColor='green' color={colorarr[this.state.index]} />
+      //
+      // </View>
+      //
+      // <View style={{marginTop: 15}}>
+      //
+      //   <Button onPress={ this.HelloFunction } title="BUTTON 2" color="#E91E63" />
+      //
+      // </View>
+      //
+      // <View style={{marginTop: 15}}>
+      //
+      //   <Button onPress={ this.HelloFunction } title="BUTTON 3" color="#9C27B0" />
+      //
+      // </View>
+      //
+      // </View>
+
+      <View style={{
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+        <View style={{width: 50, height: 50, backgroundColor: colorarr[this.state.index] }} >
+          <Button onPress={ this.colorchange } title='a' backgroundColor='green' color={colorarr[this.state.index]} />
+        </View>
+
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'skyblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
+        <View style={{width: 50, height: 50, backgroundColor: 'powderblue'}} />
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+const styles = StyleSheet.create(
+{
+    container:
+    {
+        flex: 1,
+        paddingTop: (Platform.OS === 'ios') ? 20 : 0
+    },
+
+    insiderView:
+    {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingHorizontal: 15
+    },
+
+    color:
+    {
+        fontWeight: 'bold',
+        fontSize: 20,
+        color: 'rgba(0,0,0,0.7)'
+    },
+
+    button:
+    {
+        height: 60,
+        width: 60,
+        backgroundColor: 'rgba(0,0,0,0.7)',
+        position: 'absolute',
+        right: 25,
+        bottom: 25,
+        borderRadius: 50,
+        padding: 13,
+        borderWidth: 3,
+        borderColor: 'rgba(255,255,255,0.5)'
+    }
 });
