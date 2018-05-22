@@ -128,7 +128,8 @@ lg is large size of iOS === iPad big
 
 # Publish it on Expo or hacketapp.
 Here is Expo method.
-1.  Create expo project as what introduced in their website.
+1.  Create expo project as what introduced in their website.    
+https://docs.expo.io/versions/latest/expokit/expokit   
 2.  Copy the app.js into the app.js what you created in 1.
 3.  Add Dependency in packet.json file.
     For example, in this project, we used react-native-flexbox-grid
