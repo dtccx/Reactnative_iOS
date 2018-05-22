@@ -45,15 +45,18 @@ react-native run-android
 Cause I didnt have Android device, so I havent test it in Android, I am pretty sure it will work. And I will update if having chance.  
 
 # Design Idea:
-1.  Use flexbox to create square grid
-  How to wrap flexbox into different lines?
-  Here is the solution: use flexbox-grid model to create row and column flexbox   
+1.  Use flexbox to create square grid  
+
+  How to wrap flexbox into different lines?  
+
+  Here is the solution:   
+  use flexbox-grid model to create row and column flexbox   
   use Text to extend the line's width.(the way that i think, cause there is no variable for width)  
 2.  Add button into the grid to control the color
 3.  Use this.state to change render color with one click
 
 
 # Result
-[](img/1.png)
-[](img/2.png)
-[](img/3.png)
+![](img/1.png)
+![](img/2.png)
+![](img/3.png)
