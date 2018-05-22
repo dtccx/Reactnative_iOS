@@ -22,9 +22,13 @@ react-native init XXXXXX
 (8). Run with iOS virtual machine   
 react-native run-ios
 
-
+(9). Dependency
+npm install react-native-flexbox-grid
 
 # Design Idea:
 1.  Use flexbox to create square grid
+  How to wrap flexbox into different lines?
+  Here is the solution: use flexbox-grid model to create row and column flexbox   
+  use Text to add the line's width.(the way that i think, cause there is no variable for width)  
 2.  Add button into the grid to control the color
 3.  Use this.state to change render color with one click
