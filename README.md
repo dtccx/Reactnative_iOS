@@ -6,7 +6,7 @@ develop a simple ios frontend with react native
 (2). Install HomeBlew   
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 (3). Install Node.js   
-下载地址：https://nodejs.org/download/  
+https://nodejs.org/download/  
 Make sure that /usr/local/bin is in your $PATH.  
 (4). (Optional)Install WatchMan  
 ```
@@ -124,6 +124,19 @@ sm is the size of small iOS === iPhone
 md is normal size of iOS === iPad small
 
 lg is large size of iOS === iPad big
+
+
+# Publish it on Expo or hacketapp.
+Here is Expo method.
+1.  Create expo project as what introduced in their website.
+2.  Copy the app.js into the app.js what you created in 1.
+3.  Add Dependency in packet.json file.
+    For example, in this project, we used react-native-flexbox-grid
+    So add this into it.
+4.  Run exp start.
+5.  Download exp in you phone and you can test the app.
+
+# In color-change file, I pushed code of Expo publishment.
 
 # Result
 ![](img/1.png)
