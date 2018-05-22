@@ -22,6 +22,7 @@ npm install -g react-native-cli
 ```  
 (7). Create project  
 react-native init XXXXXX
+
 (8). Run with iOS virtual machine   
 react-native run-ios
 
@@ -50,12 +51,14 @@ Cause I didnt have Android device, so I havent test it in Android, I am pretty s
 # Design Idea:
 1.  Use flexbox to create square grid  
 
-  How to wrap flexbox into different lines?  
 
-  Here is the solution:   
-  use flexbox-grid model to create row and column flexbox   
-  use Text to extend the line's width.(the way that i think, cause there is no variable for width)  
-2.  Add button into the grid to control the color
+        How to wrap flexbox into different lines?  
+
+        Here is the solution:   
+        use flexbox-grid model to create row and column flexbox   
+        use Text to extend the line's width.(the way that i think, cause there is no variable for width)  
+2.  Add button into the grid to control the color  
+
 3.  Use this.state to change render color with one click
 
 # core code
@@ -117,8 +120,10 @@ _colorchange(idx, i){
 
 ## Explain of grid API
 sm is the size of small iOS === iPhone
+
 md is normal size of iOS === iPad small
-lg is large size of iOS === iPad big 
+
+lg is large size of iOS === iPad big
 
 # Result
 ![](img/1.png)
