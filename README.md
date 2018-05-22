@@ -58,6 +58,67 @@ Cause I didnt have Android device, so I havent test it in Android, I am pretty s
 2.  Add button into the grid to control the color
 3.  Use this.state to change render color with one click
 
+# core code
+1. Global state
+```
+constructor(props){
+  super(props);
+  this.state = {
+    index0: [0, 1, 2, 3, 4, 5, 6],
+    index1: [0, 1, 2, 3, 4, 5, 6],
+    index2: [0, 1, 2, 3, 4, 5, 6],
+    index3: [0, 1, 2, 3, 4, 5, 6],
+    index4: [0, 1, 2, 3, 4, 5, 6],
+    index5: [0, 1, 2, 3, 4, 5, 6],
+    index6: [0, 1, 2, 3, 4, 5, 6],
+  }
+}
+
+_colorchange(idx, i){
+  temp = this.state[idx]
+  temp[i] = (temp[i] + 1) % conum;
+  this.setState({ [idx]: temp});
+}
+```
+
+2. Row and column grid
+```
+<Row size={14}>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[0]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 0) } title=''/>
+</Col>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[1]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 1) } title=''/>
+</Col>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[2]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 2) } title=''/>
+</Col>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[3]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 3) } title=''/>
+</Col>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[4]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 4) } title=''/>
+</Col>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[5]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 5) } title=''/>
+</Col>
+<Col sm={2} md={4} lg={3} backgroundColor={colorarr[this.state.index0[6]]}>
+  <Text>     </Text>
+  <Button onPress={ () => this._colorchange("index0", 6) } title=''/>
+</Col>
+</Row>
+```
+
+## Explain of grid API
+sm is the size of small iOS === iPhone
+md is normal size of iOS === iPad small
+lg is large size of iOS === iPad big 
 
 # Result
 ![](img/1.png)
